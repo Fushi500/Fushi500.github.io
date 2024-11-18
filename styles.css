@@ -39,7 +39,7 @@ body {
 }
 
 .nav-links a {
-    position: relative; /* This is to position the underline */
+    position: relative;
     text-decoration: none;
     color: #333;
     font-weight: 600;
@@ -51,17 +51,17 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* Slightly below the text */
+    bottom: -5px;
     width: 100%;
     height: 2px;
-    background-color: #7EB493; /* Matches your highlight color */
+    background-color: #7EB493;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #7EB493; /* Matches your highlight color */
+    color: #7EB493;
 }
 
 .nav-links a:hover::after {
@@ -79,51 +79,58 @@ body {
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
 }
 
 .resume-button:hover {
     background-color: #444;
 }
 
-.resume-icon {
+.resume-icon, .share-icon, .large-icon {
     width: 20px;
     height: 20px;
-    filter: invert(100%); /* Invert colors */
+}
+
+.large-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.resume-icon {
+    filter: invert(100%);
 }
 
 .wave-divider-nav {
     position: relative;
     width: 100%;
-    height: 120px; /* Keeps the wave height consistent */
+    height: 120px;
     overflow: hidden;
     line-height: 0;
-    padding-bottom: 30px; /* Adds space below the wave */
+    padding-bottom: 30px;
 }
 
 .wave-divider-nav svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    width: 200%;
     height: 100%;
     display: block;
-    fill: #DDEDE0; /* Match the background color of the section */
-    animation: wave-animation 10s infinite linear; /* Adds animation */
+    fill: #DDEDE0;
+    animation: wave-animation 10s infinite linear;
 }
 
 .wave-divider-nav svg:nth-child(2) {
-    transform: rotateY(180deg); /* Rotate the second SVG */
+    transform: rotateY(180deg);
 }
 
 .hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8rem 20rem 5rem 20rem; /* Reduced top padding to create a smoother flow */
-    background-color: #FAF3E0; /* Soft beige background */
+    padding: 8rem 20rem 5rem 20rem;
+    background-color: #FAF3E0;
 }
-
 
 .hero-text h1, .hero-text h2, .hero-text p {
     margin-bottom: 1rem;
@@ -135,11 +142,10 @@ body {
 }
 
 .about-photo {
-    width: 750px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
+    width: 750px;
+    height: auto;
     z-index: -1;
 }
-
 
 .highlight {
     color: #7EB493;
@@ -195,7 +201,7 @@ body {
 /* Skills Section */
 #skills {
     padding: 5rem 20rem 5rem 20rem;
-    margin-bottom: 5rem; /* Add space below the Skills section */
+    margin-bottom: 5rem;
 }
 
 .skills-container {
@@ -255,8 +261,8 @@ body {
 
 /* Experience Section */
 #experience {
-    background-color: #ddede0; /* Black background */
-    color: #fff; /* White text */
+    background-color: #ddede0;
+    color: #fff;
     padding: 3rem;
 }
 
@@ -284,7 +290,7 @@ body {
 }
 
 .experience-item {
-    background-color: #264653; /* Dark gray background for cards */
+    background-color: #264653;
     padding: 1.5rem;
     border-radius: 10px;
     width: 80%;
@@ -320,88 +326,59 @@ body {
     line-height: 1.6;
 }
 
-.wave-divider {
+.wave-divider, .wave-divider-cloud, .grass-divider, .grass-divider-bot {
     position: relative;
     width: 100%;
-    height: 150px; /* Adjust as needed for desired wave height */
     overflow: hidden;
     line-height: 0;
+}
+
+.wave-divider {
+    height: 150px;
+}
+
+.wave-divider svg, .wave-divider-cloud svg, .grass-divider svg, .grass-divider-bot svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: block;
+    animation: wave-animation 12s infinite linear;
 }
 
 .wave-divider svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /* Ensure smooth animation by extending the SVG width */
-    height: 100%;
-    display: block;
-    fill: #b1d7d3; /* Match the background color of the section */
-    animation: wave-animation 12s infinite linear; /* Slightly slower animation */
+    fill: #b1d7d3;
 }
 
-.wave-divider svg:nth-child(2) {
-    transform: rotateY(180deg); /* Rotate the second SVG */
+.wave-divider svg:nth-child(2), .wave-divider-cloud svg, .grass-divider svg, .grass-divider-bot svg {
+    transform: rotateY(180deg);
 }
 
 .wave-divider-cloud {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Adjust height for taller wave */
-    overflow: hidden;
-    line-height: 0;
-    z-index: 2; /* Ensure the divider appears in front */
+    height: 400px;
+    z-index: 2;
+    transform: rotate(180deg);
 }
 
-/* Wave Divider Cloud */
 .wave-divider-cloud svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /* Ensure smooth animation by extending the SVG width */
-    height: 100%;
-    display: block;
-    transform: rotate(180deg); /* Rotates the SVG 180 degrees */
-    animation: wave-animation 15s infinite linear; /* Different speed for variety */
+    animation: wave-animation-cloud 15s infinite linear;
 }
 
 .grass-divider {
-    position: relative;
-    width: 100%;
-    height: 150px; /* Adjust height as needed */
-    overflow: hidden;
-    line-height: 0;
-    margin-bottom: -5px; /* Overlap the project section */
-}
-
-.grass-divider svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /* Ensure smooth animation by extending the SVG width */
-    height: 100%;
-    display: block;
-    fill: #7EB493; /* Match the background color of the section */
-    animation: grass-divider 10s infinite linear; /* Adds animation */
+    height: 150px;
+    margin-bottom: -5px;
 }
 
 .grass-divider-bot {
-    position: relative;
-    width: 100%;
-    height: 150px; /* Adjust height as needed */
-    overflow: hidden;
-    line-height: 0;
-    margin-bottom: -5px; /* Overlap the project section */
+    height: 150px;
+    margin-bottom: -5px;
+    transform: rotate(180deg);
 }
 
-.grass-divider-bot svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /* Ensure smooth animation by extending the SVG width */
-    height: 100%;
-    display: block;
-    fill: #7EB493; /* Match the background color of the section */
-    animation: grass-divider 10s infinite linear; /* Adds animation */
+.grass-divider svg, .grass-divider-bot svg {
+    fill: #7EB493;
+    animation: grass-divider 10s infinite linear;
 }
 
 @keyframes wave-animation {
@@ -440,24 +417,12 @@ body {
     }
 }
 
-@keyframes grass-divider-bot {
-    0% {
-        transform: translateX(0) rotate(180deg);
-    }
-    50% {
-        transform: translateX(-50%) rotate(180deg);
-    }
-    100% {
-        transform: translateX(0) rotate(180deg);
-    }
-}
-
 .about-me-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 20rem 2rem 20rem; /* Reduced padding */
-    background-color: #FAF3E0; /* Matches the hero section background */
+    padding: 4rem 20rem 2rem 20rem;
+    background-color: #FAF3E0;
 }
 
 .about-me-content {
@@ -490,8 +455,8 @@ body {
 }
 
 .projects-section {
-    padding: 5rem 20rem;
-    background-color: #5f8575; /* Match the grass divider color */
+    padding: 3rem 20rem;
+    background-color: #5f8575;
 }
 
 .projects-container {
@@ -502,17 +467,34 @@ body {
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 5rem;
+    color: black;
+}
+
+.projects-grid {
+    display: inline-grid;
+    gap: 5rem 5rem;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .project-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(188, 186, 186, 0.816);
+    border: 5px solid black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item.reverse {
     flex-direction: row-reverse;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-text {
@@ -524,7 +506,13 @@ body {
 }
 
 .project-text h1 {
-    font-size: 5rem; /* Adjust the size as needed */
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-text h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .project-image {
@@ -533,16 +521,17 @@ body {
 }
 
 .project-image img {
-    width: 80%; /* Adjust the width to make the images smaller */
+    width: 70%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds depth to the image */
+    border-radius: 0;
+    border: 2px solid black;
+    box-shadow: rgba(240, 156, 46, 0.4) -5px 5px, rgba(240, 156, 46, 0.3) -10px 10px, rgba(240, 156, 46, 0.2) -15px 15px, rgba(240, 156, 46, 0.1) -20px 20px, rgba(240, 156, 46, 0.05) -25px 25px;
 }
 
 /* Contact Me Section */
 .contact-section {
     padding: 5rem 20rem;
-    background-color: #FAF3E0; /* Match the background color */
+    background-color: #FAF3E0;
 }
 
 .contact-container {
@@ -597,7 +586,7 @@ body {
 }
 
 .contact-image {
-    width: 600px; /* Adjust the size as needed */
+    width: 600px;
     height: auto;
 }
 
@@ -625,7 +614,6 @@ body {
         align-items: center;
         text-align: center;
         padding: 2rem;
-        
     }
 
     .hero-text h1 {
@@ -635,7 +623,68 @@ body {
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
+
     .wave-divider-cloud {
-        height: 150px; /* Adjust height for smaller screens */
+        height: 150px;
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .container-fluid {
+        background-color: #c0d6c0;
+    }
+
+    #experience {
+        background-color: #c0d6c0;
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.footer .social-icons img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    background-color: white;
+}
+
+.footer .social-icons a:hover img {
+    filter: invert(100%);
 }

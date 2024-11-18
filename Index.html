@@ -172,7 +172,7 @@
             </div>
         </section>
         <div class="wave-divider-cloud">
-            <svg viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <svg viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" transform="rotate(180 720 200)">
                 <defs>
                     <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" style="stop-color:#DDEDE0; stop-opacity:1" />
@@ -229,41 +229,76 @@
         </div>
         <section id="projects" class="projects-section">
             <div class="projects-container">
-                <h2>My Projects</span></h2>
-                <div class="project-item">
-                    <div class="project-text">
-                        <h1>01</h1>
-                        <h3>Proiect Altceva</h3>
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>01</h1>
+                            <h3>Proiect Altceva</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project One">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
                     </div>
-                    <div class="project-image">
-                        <img src="Photos/plant.png" alt="Project One">
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>02</h1>
+                            <h3>Proiect Java</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Two">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
                     </div>
-                </div>
-                <div class="project-item reverse">
-                    <div class="project-text">
-                        <h1>02</h1>
-                        <h3>Proiect Java</h3>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>03</h1>
+                            <h3>Proiect Ceva</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Three">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
                     </div>
-                    <div class="project-image">
-                        <img src="Photos/plant.png" alt="Project Two">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-text">
-                        <h1>03</h1>
-                        <h3>Proiect Ceva</h3>
-                    </div>
-                    <div class="project-image">
-                        <img src="Photos/plant.png" alt="Project Three">
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h1>04</h1>
+                            <h3>Proiect Nou</h3>
+                        </div>
+                        <div class="project-image">
+                            <img src="Photos/plant.png" alt="Project Four">
+                        </div>
+                        <img src="Photos/share.png" alt="Share Icon" class="share-icon large-icon">
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="grass-divider-bot">
+            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                style="transform: rotate(180deg); margin-bottom: -5px;">
+                <defs>
+                    <linearGradient id="gradient-grass" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" style="stop-color:#5f8575; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#7aad8e; stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#gradient-grass)"
+                    d="M0,160L48,146.7C96,133,192,107,288,93.3C384,80,480,80,576,85.3C672,91,768,101,864,106.7C960,112,1056,112,1152,106.7C1248,101,1344,91,1392,85.3L1440,80V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0H0Z">
+                </path>
+            </svg>
+            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path fill="url(#gradient-grass)"
+                    d="M0,160L48,146.7C96,133,192,107,288,93.3C384,80,480,80,576,85.3C672,91,768,101,864,106.7C960,112,1056,112,1152,106.7C1248,101,1344,91,1392,85.3L1440,80V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0H0Z">
+                </path>
+            </svg>
+        </div>
+
         <section id="contact" class="contact-section">
             <div class="contact-container">
                 <h2>Contact Me</h2>
                 <div class="contact-content">
-                    <img src="Photos/5124556.png" alt="Contact Image" class="contact-image">
                     <form action="submit_form.php" method="post" class="contact-form">
                         <div class="form-group">
                             <label for="name">Name:</label>
@@ -282,12 +317,19 @@
                 </div>
             </div>
         </section>
-
-
-        //create a new section for the footer and add all the needed things that should be in a footer
-
-        x
     </main>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://wa.me/+40730421661" target="_blank"><img src="Photos/whatsapp.png" alt="whatsapp"></a>
+            <a href="discordapp.com/users/476345528960024577" target="_blank"><img src="Photos/discord.png"
+                    alt="discord"></a>
+            <a href="https://www.linkedin.com/in/serban-darius-806673315/" target="_blank"><img
+                    src="Photos/linkedin.png" alt="linkedin"></a>
+            <a href="https://github.com/Fushi500" target="_blank"><img src="Photos/github.png" alt="GitHub"></a>
+        </div>
+        <p>&copy; 2023 Șerban Darius. All rights reserved.</p>
+        <p>Designed and Developed by Șerban Darius</p>
+    </footer>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
