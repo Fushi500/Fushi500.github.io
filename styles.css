@@ -298,13 +298,14 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .experience-item:hover {
     transform: scale(1.02);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
 }
 
 .experience-details {
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
