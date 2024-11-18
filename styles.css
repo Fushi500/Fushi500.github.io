@@ -1,0 +1,641 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'GohuFont';
+    src: url('Fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styling */
+body {
+    font-family: 'GohuFont', sans-serif;
+    background-color: #FAF3E0;
+    color: #333;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem 1rem;
+    background-color: #ddede0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative; /* This is to position the underline */
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Slightly below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #7EB493; /* Matches your highlight color */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7EB493; /* Matches your highlight color */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.resume-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.resume-button:hover {
+    background-color: #444;
+}
+
+.resume-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%); /* Invert colors */
+}
+
+.wave-divider-nav {
+    position: relative;
+    width: 100%;
+    height: 120px; /* Keeps the wave height consistent */
+    overflow: hidden;
+    line-height: 0;
+    padding-bottom: 30px; /* Adds space below the wave */
+}
+
+.wave-divider-nav svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    height: 100%;
+    display: block;
+    fill: #DDEDE0; /* Match the background color of the section */
+    animation: wave-animation 10s infinite linear; /* Adds animation */
+}
+
+.wave-divider-nav svg:nth-child(2) {
+    transform: rotateY(180deg); /* Rotate the second SVG */
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 20rem 5rem 20rem; /* Reduced top padding to create a smoother flow */
+    background-color: #FAF3E0; /* Soft beige background */
+}
+
+
+.hero-text h1, .hero-text h2, .hero-text p {
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.about-photo {
+    width: 750px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    z-index: -1;
+}
+
+
+.highlight {
+    color: #7EB493;
+    font-weight: bold;
+}
+
+.outlined-text {
+    color: transparent;
+    -webkit-text-stroke: 1.7px #333;
+    font-weight: bold;
+}
+
+.description {
+    color: #666;
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #333;
+}
+
+.social-icons a:hover img {
+    filter: grayscale(100%);
+}
+
+/* Skills Section */
+#skills {
+    padding: 5rem 20rem 5rem 20rem;
+    margin-bottom: 5rem; /* Add space below the Skills section */
+}
+
+.skills-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.skills-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #333;
+    padding: 0.7rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 185px;
+    height: 170px;
+    text-align: center;
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-top: 2rem;
+}
+
+.skill-item p {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.skill-item:hover p {
+    color: #e0e0e0;
+}
+
+.skill-item:hover {
+    transform: scale(1.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100);
+    background-color: #333;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #ddede0; /* Black background */
+    color: #fff; /* White text */
+    padding: 3rem;
+}
+
+.experience-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.highlight-experience {
+    color: white;
+    font-weight: bold;
+}
+
+.experience-container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.experience-item {
+    background-color: #264653; /* Dark gray background for cards */
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.experience-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.experience-details p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.experience-description {
+    font-size: 1.1rem;
+    color: #BFD7EA;
+    line-height: 1.6;
+}
+
+.wave-divider {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust as needed for desired wave height */
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    height: 100%;
+    display: block;
+    fill: #b1d7d3; /* Match the background color of the section */
+    animation: wave-animation 12s infinite linear; /* Slightly slower animation */
+}
+
+.wave-divider svg:nth-child(2) {
+    transform: rotateY(180deg); /* Rotate the second SVG */
+}
+
+.wave-divider-cloud {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height for taller wave */
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2; /* Ensure the divider appears in front */
+}
+
+/* Wave Divider Cloud */
+.wave-divider-cloud svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    height: 100%;
+    display: block;
+    transform: rotate(180deg); /* Rotates the SVG 180 degrees */
+    animation: wave-animation 15s infinite linear; /* Different speed for variety */
+}
+
+.grass-divider {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -5px; /* Overlap the project section */
+}
+
+.grass-divider svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    height: 100%;
+    display: block;
+    fill: #7EB493; /* Match the background color of the section */
+    animation: grass-divider 10s infinite linear; /* Adds animation */
+}
+
+.grass-divider-bot {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -5px; /* Overlap the project section */
+}
+
+.grass-divider-bot svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Ensure smooth animation by extending the SVG width */
+    height: 100%;
+    display: block;
+    fill: #7EB493; /* Match the background color of the section */
+    animation: grass-divider 10s infinite linear; /* Adds animation */
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes wave-animation-cloud {
+    0% {
+        transform: translateX(0) rotate(180deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+    }
+}
+
+@keyframes grass-divider {
+    0% {
+        transform: translateX(0) rotate(180deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+    }
+}
+
+@keyframes grass-divider-bot {
+    0% {
+        transform: translateX(0) rotate(180deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+    }
+}
+
+.about-me-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 20rem 2rem 20rem; /* Reduced padding */
+    background-color: #FAF3E0; /* Matches the hero section background */
+}
+
+.about-me-content {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+}
+
+.about-me-image {
+    flex: 1;
+}
+
+.about-me-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-me-text {
+    flex: 2;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.about-me-text h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.projects-section {
+    padding: 5rem 20rem;
+    background-color: #5f8575; /* Match the grass divider color */
+}
+
+.projects-container {
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.project-text h1 {
+    font-size: 5rem; /* Adjust the size as needed */
+}
+
+.project-image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.project-image img {
+    width: 80%; /* Adjust the width to make the images smaller */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds depth to the image */
+}
+
+/* Contact Me Section */
+.contact-section {
+    padding: 5rem 20rem;
+    background-color: #FAF3E0; /* Match the background color */
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #444;
+}
+
+.contact-image {
+    width: 600px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .wave-divider-cloud {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+}
