@@ -111,21 +111,6 @@ body {
 	padding-bottom: 30px;
 }
 
-.wave-divider-nav svg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200%;
-	height: 100%;
-	display: block;
-	fill: #DDEDE0;
-	animation: wave-animation 10s infinite linear;
-}
-
-.wave-divider-nav svg:nth-child(2) {
-	transform: rotateY(180deg);
-}
-
 .hero-section {
 	display: flex;
 	align-items: center;
@@ -330,113 +315,6 @@ body {
 	font-size: 1.1rem;
 	color: #BFD7EA;
 	line-height: 1.6;
-}
-
-.wave-divider,
-.wave-divider-cloud,
-.grass-divider,
-.grass-divider-bot {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-}
-
-.wave-divider {
-	height: 150px;
-}
-
-.wave-divider svg,
-.wave-divider-cloud svg,
-.grass-divider svg,
-.grass-divider-bot svg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200%;
-	height: 100%;
-	display: block;
-	animation: wave-animation 12s infinite linear;
-}
-
-.wave-divider svg {
-	fill: #b1d7d3;
-}
-
-.wave-divider svg:nth-child(2),
-.wave-divider-cloud svg,
-.grass-divider svg,
-.grass-divider-bot svg {
-	transform: rotateY(180deg);
-}
-
-.wave-divider-cloud {
-	height: 400px;
-	z-index: 2;
-	transform: rotate(180deg);
-}
-
-.wave-divider-cloud svg {
-	animation: wave-animation-cloud 15s infinite linear;
-}
-
-.grass-divider {
-	height: 150px;
-	margin-bottom: -5px;
-}
-
-.grass-divider-bot {
-	height: 150px;
-	margin-bottom: -5px;
-	transform: rotate(180deg);
-}
-
-.grass-divider svg,
-.grass-divider-bot svg {
-	fill: #7EB493;
-	animation: grass-divider 10s infinite linear;
-}
-
-@keyframes wave-animation {
-	0% {
-		transform: translateX(0);
-	}
-
-	50% {
-		transform: translateX(-50%);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes wave-animation-cloud {
-	0% {
-		transform: translateX(0) rotate(180deg);
-	}
-
-	50% {
-		transform: translateX(-50%) rotate(180deg);
-	}
-
-	100% {
-		transform: translateX(0) rotate(180deg);
-	}
-}
-
-@keyframes grass-divider {
-	0% {
-		transform: translateX(0) rotate(180deg);
-	}
-
-	50% {
-		transform: translateX(-50%) rotate(180deg);
-	}
-
-	100% {
-		transform: translateX(0) rotate(180deg);
-	}
 }
 
 .about-me-section {
