@@ -70,8 +70,7 @@ gap: 15px;
 background-color: #444;
 }
 .resume-icon,
-.share-icon,
-.large-icon {
+.share-icon {
 width: 20px;
 height: 20px;
 }
@@ -86,7 +85,6 @@ filter: invert(100%);
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 8rem 20rem 5rem 20rem;
 }
 .hero-text h1,
 .hero-text h2,
@@ -100,7 +98,6 @@ font-weight: bold;
 .about-photo {
 width: 750px;
 height: auto;
-z-index: -1;
 }
 .highlight {
 color: #7EB493;
@@ -116,7 +113,7 @@ color: #666;
 margin-top: 1.5rem;
 font-size: 1.7rem;
 line-height: 1.6;
-max-width: 650px;
+max-width: 800px;
 }
 .social-icons {
 display: flex;
@@ -145,7 +142,6 @@ background-color: #333;
 filter: grayscale(100%);
 }
 #skills {
-padding: 5rem 20rem 5rem 20rem;
 margin-bottom: 5rem;
 }
 .skills-container {
@@ -168,7 +164,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 border: 2px solid #333;
-padding: 0.7rem;
+padding: 1rem;
 border-radius: 8px;
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 width: 185px;
@@ -178,10 +174,10 @@ text-align: center;
 .skill-item img {
 width: 40px;
 height: 40px;
-margin-top: 2rem;
+margin-top: 1.75rem;
 }
 .skill-item p {
-font-size: 1.75rem;
+font-size: 1.5rem;
 font-weight: 600;
 color: #333;
 margin-top: 0.5rem;
@@ -192,7 +188,7 @@ color: #e0e0e0;
 .skill-item:hover {
 transform: scale(1.15);
 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-filter: grayscale(100);
+filter: hue-rotate(120deg);
 background-color: #333;
 }
 #experience {
