@@ -92,7 +92,7 @@ justify-content: center;
 }
 .hero-text {
     position: relative;
-    top: -300px; /* Move the hero text further up */
+    top: -500px; /* Move the hero text further up */
 }
 .right-photo {
     position: absolute;
@@ -163,7 +163,7 @@ margin-bottom: 5rem;
 }
 .skills-container {
 text-align: center;
-margin-top: 17rem;
+margin-top: -5rem; /* Move the skills section further up */
 }
 .skills-container h2 {
 font-size: 4rem;
