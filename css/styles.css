@@ -12,6 +12,10 @@ font-family: 'GohuFont', sans-serif;
 color: #333;
 background-color: #FAF3E0 !important;
 }
+.wave-divider-nav {
+    border-bottom: none; /* Removes any bottom border */
+}
+
 .container-fluid {
 display: flex;
 justify-content: space-between;
@@ -139,14 +143,14 @@ transition: filter 0.3s ease;
 background-color: #333;
 }
 .social-icons a:hover img {
-filter: grayscale(100%);
+filter:grayscale(100%);
 }
 #skills {
 margin-bottom: 5rem;
 }
 .skills-container {
 text-align: center;
-margin-top: 2rem;
+margin-top: 17rem;
 }
 .skills-container h2 {
 font-size: 4rem;
@@ -188,7 +192,7 @@ color: #e0e0e0;
 .skill-item:hover {
 transform: scale(1.15);
 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-filter: hue-rotate(120deg);
+filter: hue-rotate(80deg);
 background-color: #333;
 }
 #experience {
@@ -250,7 +254,6 @@ line-height: 1.6;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 4rem 20rem 2rem 20rem;
 }
 .about-me-content {
 display: flex;
@@ -263,13 +266,12 @@ flex: 1;
 .about-me-image img {
 width: 100%;
 height: auto;
-border-radius: 10px;
 }
 .about-me-text {
 flex: 2;
-font-size: 1.5rem;
+font-size: 1.3rem;
 color: #333;
-line-height: 1.8;
+line-height: 2;
 max-width: 600px;
 }
 .about-me-text h1 {
@@ -410,9 +412,6 @@ font-size: 2.5rem;
 }
 .skills-grid {
 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-.wave-divider-cloud {
-height: 150px;
 }
 .projects-grid {
 grid-template-columns: 1fr;
