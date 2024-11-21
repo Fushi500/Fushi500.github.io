@@ -5,7 +5,6 @@ font-weight: normal;
 font-style: normal;
 }
 
-
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 body {
@@ -87,9 +86,20 @@ height: 50px;
 filter: invert(100%);
 }
 .hero-section {
-display: flex;
-align-items: center;
-justify-content: space-between;
+display: inline-block;
+justify-content: center;
+}
+.hero-text {
+    position: relative;
+}
+.right-photo {
+    position: absolute;
+    right: -600px; /* Move the photo more to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    width: 700px; /* Adjust the width as needed */
+    height: auto;
 }
 .hero-text h1,
 .hero-text h2,
@@ -118,7 +128,7 @@ color: #666;
 margin-top: 1.5rem;
 font-size: 1.7rem;
 line-height: 1.6;
-max-width: 800px;
+max-width: 650px;
 }
 .social-icons {
 display: flex;
@@ -200,6 +210,12 @@ background-color: #333;
 background-color: #ddede0;
 color: #fff;
 padding: 3rem;
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
 }
 .experience-container {
 text-align: center;
@@ -282,6 +298,12 @@ width: 100%;
 .projects-section {
 padding: 3rem 20rem;
 background-color: #5f8575;
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
 }
 .projects-container {
 text-align: center;
@@ -466,3 +488,12 @@ background-color: white;
 .footer .social-icons a:hover img {
 filter: invert(100%);
 }
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
